@@ -2,6 +2,8 @@ import React from 'react';
 
 import './styles.css'
 import PageHeader from '../../components/PageHeader';
+import TeacherItem from '../../components/TeacherItem';
+
 
 // import { Container } from './styles';
 
@@ -12,7 +14,7 @@ function TeacherList() {
         {/* Passado para o props.children */}
         <form id="search-teachers">
           <div className="input-block">
-            <label htmlFor="subject">Matérica</label>
+            <label htmlFor="subject">Matéria</label>
             <input type="text" id="subject" />
           </div>
 
@@ -27,6 +29,13 @@ function TeacherList() {
           </div>
         </form>
       </PageHeader>
+
+      <main>
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+      </main>
     </div>
   )
 }
