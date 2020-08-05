@@ -61,7 +61,8 @@ function TeacherForm() {
       whatsapp,
       bio,
       subject,
-      cost
+      cost,
+      scheduleitems
     });
   }
 
@@ -148,6 +149,7 @@ function TeacherForm() {
                   <Select
                     name="week_day"
                     label="Dia da semana"
+                    value={scheduleItem.week_day}
                     onChange={e => setScheduleItemValue(index, 'week_day', e.target.value)}
                     // Passando as opções do select
                     options={[
@@ -160,8 +162,20 @@ function TeacherForm() {
                       { value: '6', label: 'Sábado' },
                     ]}
                   />
-                  <Input name="from" label="Das" type="time" />
-                  <Input name="to" label="Até" type="time" />
+                  <Input
+                    name="from"
+                    label="Das"
+                    type="time"
+                    value={scheduleItem.from}
+                    onChange={e => setScheduleItemValue(index, 'from', e.target.value)}
+                  />
+                  <Input
+                    name="to"
+                    label="Até"
+                    type="time"
+                    value={scheduleItem.to}
+                    onChange={e => setScheduleItemValue(index, 'to', e.target.value)}
+                  />
                 </div>
               )
             })}
