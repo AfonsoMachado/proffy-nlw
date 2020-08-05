@@ -9,6 +9,7 @@ import './styles.css'
 // Definindo as props do componente
 interface PageHeaderProps {
   title: string;
+  description?: string
 }
 
 // Componente funcional
@@ -24,7 +25,8 @@ const PageHeader: React.FC<PageHeaderProps> = (props) => {
 
       <div className="header-content">
         <strong>{props.title}</strong>
-
+        {/* Condicional para mostrar a descrição somente se ela existir */}
+        {props.description && <p>{props.description}</p>}
         {/* Propriedade automatica do react */}
         {props.children}
       </div>
