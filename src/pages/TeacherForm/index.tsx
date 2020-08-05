@@ -7,6 +7,7 @@ import warningIcon from '../../assets/images/icons/warning.svg'
 import Textarea from '../../components/TextArea';
 import Select from '../../components/Select';
 import PageHeader from '../../components/PageHeader';
+import api from '../../services/api';
 
 function TeacherForm() {
   const [name, setName] = useState('')
@@ -18,7 +19,7 @@ function TeacherForm() {
   const [cost, setCost] = useState('')
 
   // desestruturando
-  const [scheduleitems, setScheduleItems] = useState([
+  const [scheduleItems, setScheduleItems] = useState([
     {
       week_day: 0,
       from: '',
@@ -29,7 +30,7 @@ function TeacherForm() {
   // Adicionar novos itens ao schedule itens
   function addNewScheduleItem() {
     setScheduleItems([
-      ...scheduleitems,
+      ...scheduleItems,
       {
         week_day: 0,
         from: '',
@@ -40,7 +41,7 @@ function TeacherForm() {
 
   function setScheduleItemValue(position: number, field: string, value: string) {
     // novo array com as alterações requeridas
-    const updatedScheduleItem = scheduleitems.map((scheduleitem, index) => {
+    const updatedScheduleItem = scheduleItems.map((scheduleitem, index) => {
       //  se o item recebido for igual ao item que queremos alterar
       if (index === position) {
         // copia todo o scheduleItem e sobrescreve o valor de week_day
@@ -55,15 +56,30 @@ function TeacherForm() {
   // Chama quando der submit no form
   function handleCreateClass(e: FormEvent) {
     e.preventDefault()
-    console.log({
+
+    api.post('/classes', {
       name,
       avatar,
       whatsapp,
       bio,
       subject,
-      cost,
-      scheduleitems
-    });
+      cost: Number(cost),
+      schedule: scheduleItems
+    }).then(() => {
+      alert('Cadastro realizado com sucesso')
+    }).catch(() => {
+      alert('erro no cadastro')
+    })
+
+    //   console.log({
+    //     name,
+    //     avatar,
+    //     whatsapp,
+    //     bio,
+    //     subject,
+    //     cost,
+    //     scheduleItems
+    //   });
   }
 
 
@@ -121,6 +137,7 @@ function TeacherForm() {
                 { value: 'Educação Física', label: 'Educação Física' },
                 { value: 'Química', label: 'Química' },
                 { value: 'Física', label: 'Física' },
+                { value: 'Matemática', label: 'Matemática' },
                 { value: 'Geografia', label: 'Geografia' },
                 { value: 'História', label: 'História' },
                 { value: 'Português', label: 'Português' },
@@ -143,7 +160,7 @@ function TeacherForm() {
           </button>
             </legend>
 
-            {scheduleitems.map((scheduleItem, index) => {
+            {scheduleItems.map((scheduleItem, index) => {
               return (
                 <div key={scheduleItem.week_day} className="schedule-item">
                   <Select
