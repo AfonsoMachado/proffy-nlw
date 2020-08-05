@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import PageHeader from '../../components/PageHeader';
-
-// import { Container } from './styles';
 
 import './styles.css'
-import Input from '../../components/Input';
 
+import Input from '../../components/Input';
 import warningIcon from '../../assets/images/icons/warning.svg'
 import Textarea from '../../components/TextArea';
 import Select from '../../components/Select';
+import PageHeader from '../../components/PageHeader';
 
 function TeacherForm() {
   // desestruturando
