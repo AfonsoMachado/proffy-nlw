@@ -16,10 +16,15 @@ const styles = StyleSheet.create({
   },
 
   title: {
+    fontFamily: 'Poppins_400Regular',
     color: '#fff',
     fontSize: 20,
     lineHeight: 30,
     marginTop: 80,
+  },
+
+  titleBold: {
+    fontFamily: 'Poppins_600SemiBold'
   }
 
 })
