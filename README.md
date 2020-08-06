@@ -86,3 +86,11 @@ $ yarn install
 $ yarn start
 ```
 Após a execução, leia o QRCode usando o aplicativo Expo em seu smartphone
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+<p align="center">Feito com 💜 por <strong><a href="https://www.linkedin.com/in/AfonsoMachado/">Afonso Machado</a> 🥰 </strong> </p>
