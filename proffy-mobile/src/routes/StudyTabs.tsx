@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -18,17 +19,23 @@ function studyTabs() {
           // sombras, equivalente a box shadow
           elevation: 0,
           shadowOpacity: 0,
-          height: 64,
+          // Identificando um height diferente para iOS
+          height: Platform.OS === 'ios' ? 84 : 64,
         },
         tabStyle: {
           flexDirection: 'row',
           alignItems: 'center',
-          justifyContent: 'center'
+          justifyContent: 'center',
+          paddingBottom: Platform.OS === 'ios' ? 20 : 0,
+        },
+        // garante que a Bottom Tab Bar não dê nenhum espaçamento da "área de segurança" na parte de baixo do iPhone
+        safeAreaInsets: {
+          bottom: 0
         },
         iconStyle: {
           flex: 0,
           width: 20,
-          height: 20,
+          height: Platform.OS === 'ios' ? 24 : 20,
         },
         labelStyle: {
           fontFamily: 'Archivo_700Bold',
