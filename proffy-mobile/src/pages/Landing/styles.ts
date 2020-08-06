@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
 
   banner: {
     width: '100%',
-    // Adaptando o tamanho da imagem
+    // Adaptando o tamanho da imagem à tela
     resizeMode: 'contain'
   },
 
@@ -54,6 +54,15 @@ const styles = StyleSheet.create({
     fontFamily: 'Archivo_700Bold',
     color: '#fff',
     fontSize: 20
+  },
+
+  totalConnections: {
+    fontFamily: 'Poppins_400Regular',
+    color: '#d4c2ff',
+    fontSize: 12,
+    lineHeight: 20,
+    maxWidth: 140,
+    marginTop: 40,
   }
 
 })
