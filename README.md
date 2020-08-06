@@ -35,13 +35,15 @@
 
 ## :fire: Instalação
 
-**Clonando o repositório:**
+É necessário ter um ambiente NodeJS ou Yarn instalado em sua máquina
+
+### Clonando o repositório:
 
 ```
 $ git clone https://github.com/AfonsoMachado/proffy-nlw.git
 ```
 
-**Executando back-end**
+### Executando back-end
 
 ```bash
 # Go to server folder
@@ -55,7 +57,7 @@ $ yarn start
 ```
 Executando em http://localhost:3333/
 
-**Executando front-end web**
+### Executando front-end web
 
 ```bash
 # Go to web folder
@@ -69,6 +71,18 @@ $ yarn start
 ```
 Executando em http://localhost:3000/ .
 
-**Executando aplicação mobile**
+### Executando aplicação mobile
 
 Necesário um smartphone com Android ou iOS, com o aplicativo Expo ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent) | [iOS](https://apps.apple.com/br/app/expo-client/id982107779)) instalado, ou um emulador rodando uma máquina virtual Android/iOS
+
+```bash
+# Go to mobile folder
+$ cd proffy-mobile
+
+# Install Dependencies
+$ yarn install
+
+# Run Aplication
+$ yarn start
+```
+Após a execução, leia o QRCode usando o aplicativo Expo em seu smartphone
