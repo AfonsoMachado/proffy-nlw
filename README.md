@@ -55,3 +55,20 @@ $ yarn start
 ```
 Executando em http://localhost:3333/
 
+**Executando front-end web**
+
+```bash
+# Go to web folder
+$ cd proffy-web
+
+# Install Dependencies
+$ yarn install
+
+# Run Aplication
+$ yarn start
+```
+Executando em http://localhost:3000/ .
+
+**Executando aplicação mobile**
+
+Necesário um smartphone com Android ou iOS, com o aplicativo Expo ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent) | [iOS](https://apps.apple.com/br/app/expo-client/id982107779)) instalado, ou um emulador rodando uma máquina virtual Android/iOS
