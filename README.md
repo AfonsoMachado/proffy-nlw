@@ -98,5 +98,12 @@ Após a execução, leia o QRCode usando o aplicativo Expo em seu smartphone
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
+<!-- ## 💻 Projeto
 
+O Proffy é uma plataforma de estudos que ajuda alunos a encontrarem professores que reforçam seus estudos de forma eficiente.
+
+## 🔖 Layout
+
+Você pode visualizar o layout do projeto web por meio [desse link](https://www.figma.com/file/js7pVWjFwfMgICztEsbXIz/Proffy--Web) e o layout do projeto mobile por meio desse [outro link](https://www.figma.com/file/X6QcE1WnqOCkwe91HKcGAs/Proffy--Mobile). Lembrando que você irá precisar ter uma conta no [Figma](http://figma.com/).
+-->
 <p align="center">Feito com 💜 por <strong><a href="https://www.linkedin.com/in/AfonsoMachado/">Afonso Machado</a> 🥰 </strong> </p>
