@@ -9,6 +9,12 @@
 
 <p align="center">O Proffy é uma plataforma de estudos online que visa conectar professores a alunos.</p>
 
+<p align="center">
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#instalacao">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
 <!--
 # Índice
 
