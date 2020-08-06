@@ -30,6 +30,13 @@
   margin-top: 3.2rem;
 }
 
+#search-teachers button img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.2rem;
+  /* border-radius: 50%; */
+}
+
 #search-teachers button:hover {
   background: var(--color-secondary-dark);
 }
@@ -38,6 +45,8 @@
   margin: 3.2rem auto;
   width: 90%;
 }
+
+
 
 @media (min-width: 700px) {
   #page-teacher-list {

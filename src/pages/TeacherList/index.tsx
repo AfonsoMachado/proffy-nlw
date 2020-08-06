@@ -7,6 +7,8 @@ import TeacherItem, { Teacher } from '../../components/TeacherItem';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
 
+import searchIcon from '../../assets/images/search.png'
+
 import api from '../../services/api';
 
 // import { Container } from './styles';
@@ -88,6 +90,7 @@ function TeacherList() {
           />
 
           <button type="submit">
+            <img src={searchIcon} alt="Whatsapp" />
             Buscar
           </button>
 
