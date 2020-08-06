@@ -10,6 +10,7 @@ import { useNavigation } from '@react-navigation/native'
 function GiveClasses() {
   const { goBack } = useNavigation();
 
+  // TODO: Redirecionar para o link do site para cadastro de um novo professor, colocando um navegador interno
   function handleNavigateBack() {
     goBack();
   }
