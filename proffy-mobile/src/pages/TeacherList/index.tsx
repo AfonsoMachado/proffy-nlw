@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { View, ScrollView, Text, TextInput } from 'react-native'
 
 import styles from './styles'
@@ -7,15 +7,32 @@ import TeacherItem, { Teacher } from '../../components/TeacherItem'
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler'
 import { Feather } from '@expo/vector-icons';
 import api from '../../services/api'
+import AsyncStorage from '@react-native-community/async-storage'
 
 function TeacherList() {
   const [teachers, setTeachers] = useState([])
+  const [favorites, setFavorites] = useState<number[]>([])
   // Para exibir ou nao o formulario de filtro
   const [isFiltersVisible, setIsFiltersVisible] = useState(false)
 
   const [subject, setSubject] = useState('')
   const [week_day, setWeekDay] = useState('')
   const [time, setTime] = useState('')
+
+  // capturando todos os professoar que o usuario ja favoritou
+  useEffect(() => {
+    AsyncStorage.getItem('favorites').then(response => {
+      if (response) {
+        // capturando a resposta com os favoritos, convertendo em objeto e salvando
+        const favoritedTeachers = JSON.parse(response)
+        // Array com os ids dos professores favoritados
+        const favoritedTeachersIds = favoritedTeachers.map((teacher: Teacher) => {
+          return teacher.id
+        })
+        setFavorites(favoritedTeachersIds)
+      }
+    })
+  }, [])
 
   function handleToggleFiltersVisible() {
     setIsFiltersVisible(!isFiltersVisible)
@@ -59,7 +76,7 @@ function TeacherList() {
             />
 
             {/* Dois inputs um ao lado do oturo */}
-            {/* TODO Usar select para o dia da semana (picker) */}
+            {/* TODO Usar select para o dia da semana para não uasr um numero (picker) */}
             <View style={styles.inputGroup}>
               <View style={styles.inputBlock}>
                 <Text style={styles.label}>Dia da semana</Text>
@@ -105,7 +122,14 @@ function TeacherList() {
       >
         {/* Exibindo a lista de professores */}
         {teachers.map((teacher: Teacher) => {
-          return <TeacherItem key={teacher.id} teacher={teacher} />
+          return (
+            <TeacherItem
+              key={teacher.id}
+              teacher={teacher}
+              favorited={favorites.includes(teacher.id)}
+            />
+          )
+
         })}
 
       </ScrollView>
