@@ -1,5 +1,5 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, ScrollView } from 'react-native'
 
 import styles from './styles'
 import PageHeader from '../../components/PageHeader'
@@ -10,7 +10,19 @@ function TeacherList() {
     <View style={styles.container}>
       <PageHeader title="Proffys disponíveis" />
 
-      <TeacherItem />
+      {/* TELA COM SCROLL */}
+      <ScrollView
+        style={styles.teacherList}
+        contentContainerStyle={{
+          paddingHorizontal: 16,
+          paddingBottom: 16,
+        }}
+      >
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+      </ScrollView>
+      
     </View>
   )
 
