@@ -3,6 +3,7 @@ import cors from 'cors'
 import routes from './routes';
 
 const app = express();
+const port = 3333
 
 // Permite que outro endereço acesse a API do db
 app.use(cors())
@@ -15,4 +16,5 @@ app.use(routes)
 // Query params: Paginação, filtros, ordenação, etc
 
 // localhost:3333
-app.listen(3333);
+app.listen(port);
+console.log(`Backend executando na porta ${port}`);
