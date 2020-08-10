@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { View, ScrollView, Text, TextInput } from 'react-native'
 
 import styles from './styles'
@@ -20,7 +20,8 @@ function TeacherList() {
   const [time, setTime] = useState('')
 
   // capturando todos os professoar que o usuario ja favoritou
-  useEffect(() => {
+
+  function loadFavorites() {
     AsyncStorage.getItem('favorites').then(response => {
       if (response) {
         // capturando a resposta com os favoritos, convertendo em objeto e salvando
@@ -32,7 +33,7 @@ function TeacherList() {
         setFavorites(favoritedTeachersIds)
       }
     })
-  }, [])
+  }
 
   function handleToggleFiltersVisible() {
     setIsFiltersVisible(!isFiltersVisible)
@@ -40,6 +41,7 @@ function TeacherList() {
 
   // Disparada quando o usuario clica no botão filtrar
   async function handleFiltersSubmit() {
+    loadFavorites()
     const response = await api.get('/classes', {
       params: {
         subject,
