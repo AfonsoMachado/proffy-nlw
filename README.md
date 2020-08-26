@@ -5,7 +5,7 @@
    <img src="https://github.com/AfonsoMachado/proffy-nlw/blob/master/proffy-web/src/assets/images/logo2.png" alt="Logo" width="200"/>   
 </p>
 
-<p align="center">:rocket: Projeto implementado durante o evento Next Level Week, organizado pelo Rocketseat, com o objetivo de durante uma semana desenvolver um projeto completo aplicando conceitos e ferramentas usados no mercado atualmente.</p>
+<p align="center">:rocket: Projeto implementado durante o evento Next Level Week, organizado pela <a href="https://rocketseat.com.br/">Rocketseat</a>, com o objetivo de durante uma semana desenvolver um projeto completo aplicando conceitos e ferramentas usados no mercado atualmente.</p>
 
 <p align="center">O Proffy é uma plataforma de estudos online que visa conectar professores a alunos.</p>
 
