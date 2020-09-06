@@ -63,6 +63,16 @@ $ yarn start
 ```
 Executando em http://localhost:3333/
 
+#### Criando banco de dados 
+
+```bash
+# Go to server folder
+$ cd proffy-server
+
+# Run Migrations
+$ yarn knex:migrate
+```
+
 ### Executando front-end web
 
 ```bash
@@ -92,6 +102,15 @@ $ yarn install
 $ yarn start
 ```
 Após a execução, leia o QRCode usando o aplicativo Expo em seu smartphone
+
+#### Conectando aplicação mobile com o back-end
+
+```bash
+# Go to services folder
+$ cd proffy-mobile/src/services/api.ts
+```
+
+Editar o arquivo 'api.ts' inserindo a URL indicada no expo junto com a porta do backend.
 
 ## :memo: Licença
 
