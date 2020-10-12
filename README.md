@@ -12,7 +12,8 @@
 <p align="center">
   <a href="#computer-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#fire-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#memo-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#bookmark-layout">Licença</a>
 </p>
 
 <!--
@@ -116,13 +117,10 @@ Editar o arquivo 'api.ts' inserindo a URL indicada no expo junto com a porta do 
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
+## :bookmark: Layout
+
+Você pode visualizar o layout do projeto web por meio [desse link](https://www.figma.com/file/Cn5Y0uxI1SIb9yMx7lD8tt/Proffy-Web-Copy) e o layout do projeto mobile por meio desse [outro link](https://www.figma.com/file/5OQbcq9tQpCm8HQ7ZF4NVt/Proffy-Mobile-Copy). Lembrando que você irá precisar ter uma conta no [Figma](http://figma.com/).
+
 ---
-<!-- ## 💻 Projeto
 
-O Proffy é uma plataforma de estudos que ajuda alunos a encontrarem professores que reforçam seus estudos de forma eficiente.
-
-## 🔖 Layout
-
-Você pode visualizar o layout do projeto web por meio [desse link](https://www.figma.com/file/js7pVWjFwfMgICztEsbXIz/Proffy--Web) e o layout do projeto mobile por meio desse [outro link](https://www.figma.com/file/X6QcE1WnqOCkwe91HKcGAs/Proffy--Mobile). Lembrando que você irá precisar ter uma conta no [Figma](http://figma.com/).
--->
 <p align="center">Feito com 💜 por <strong><a href="https://www.linkedin.com/in/AfonsoMachado/">Afonso Machado</a> 🥰 </strong> </p>
