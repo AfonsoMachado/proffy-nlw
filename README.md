@@ -110,8 +110,13 @@ Após a execução, leia o QRCode usando o aplicativo Expo em seu smartphone
 # Go to services folder
 $ cd proffy-mobile/src/services/api.ts
 ```
-
 Editar o arquivo 'api.ts' inserindo a URL indicada no expo junto com a porta do backend.
+
+Caso esteja usando um emulador de android, executar o seguinte comando no seu terminal:
+
+```bash
+$ adb reverse tcp:3333 tcp:3333
+```
 
 ## :memo: Licença
 
